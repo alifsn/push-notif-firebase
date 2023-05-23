@@ -1,0 +1,67 @@
+{
+	"info": {
+		"_postman_id": "d5c76f99-80af-471c-aef9-e6c68c419747",
+		"name": "push-notif",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26155532"
+	},
+	"item": [
+		{
+			"name": "Send to device",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"deviceId\": \"eIlCwLgW7vM:APA91bEchNPZ3pdYhxVxPEB6csQS7tNL-MP44F7VfEfuYBhThQFnUZeE8tFFGD_xhIgxTvgH-M9fo4XkMLgudvGLPfG6ySW9HpENzb00iQXZ22rBApMPb3Ed1FjxSs7QO9bwqyjs9o-j\",\n    \"message\": \"Test notif 123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/notif/v1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"notif",
+						"v1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Send to topic",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"topic\": \"topicNotif\",\n    \"message\": \"Test ini topic notif \"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/notif/v1/topic",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"notif",
+						"v1",
+						"topic"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
